@@ -74,3 +74,12 @@ public annotation class JsonNames(vararg val names: String)
 @Target(AnnotationTarget.CLASS)
 @ExperimentalSerializationApi
 public annotation class JsonClassDiscriminator(val discriminator: String)
+
+/**
+ * Specifies that unexpected JSON keys should be ignored when deserializing
+ * the annotated class.
+ */
+@SerialInfo
+@Target(AnnotationTarget.CLASS)
+@ExperimentalSerializationApi
+public annotation class JsonIgnoreUnknownKeys
